@@ -227,9 +227,11 @@ let editarAdministrador = (req, res) => {
         SINCRONIZAMOS LAS PROMESAS
         =============================================*/
 
-        validarCambioPassword(body, pass).then(pass => {
+        validarCambioPassword(body, pass)
+        .then(pass => {
 
-            cambiarRegistrosBD(id, body, pass).then(respuesta => {
+            cambiarRegistrosBD(id, body, pass)
+            .then(respuesta => {
 
                 respuesta["res"].json({
 
